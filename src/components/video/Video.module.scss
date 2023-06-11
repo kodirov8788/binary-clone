@@ -1,0 +1,139 @@
+@import "../../variables";
+
+.video {
+    position: relative;
+    width: 100%;
+   height: avto;
+   aspect-ratio: 16/9;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: $font-sfpro-bold;
+}
+
+.backgroundVideo {
+    background-size: cover;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 100;
+}
+.backgroundVideoMobile {
+    display: none;
+}
+.videoPartSections {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    width: 70%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h2 {
+
+        max-width: 1020px;
+        min-height: 64px;
+        font-family: 'sfpro-regular';
+        font-style: normal;
+        font-weight: 540;
+        font-size: 32px;
+        line-height: 32px;
+        color: #ffffff;
+
+        img {
+            height: 26px;
+        }
+    }
+
+    .videoBottomPart {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 48px 0;
+
+        p {
+            width: 500px;
+            color: #ffffff;
+        }
+
+        h3 {
+            margin-left: auto;
+            text-align: end;
+            max-width: 828px;
+            min-height: 64px;
+            font-family: 'sfpro-regular';
+            font-style: normal;
+            font-weight: 540;
+            font-size: 32px;
+            line-height: 32px;
+            color: #ffffff;
+        }
+
+    }
+}
+
+@media only screen and (max-width: 1091px) {
+    .videoPartSections {
+        top: 10%;
+        left: 10%;
+        width: 80%;
+        height: 80%;
+        gap: 24px 0;
+
+        h2 {
+            font-size: 24px;
+            line-height: 24px;
+        }
+
+        .videoBottomPart {
+            gap: 24px 0;
+
+            p {
+                width: 100%;
+            }
+
+            h3 {
+                font-size: 24px;
+                line-height: 24px;
+            }
+        }
+    }
+}
+    
+@media screen and (max-width: 725px){
+    .video {
+      height: 100VH;
+       width: 100vw;
+       overflow: hidden;
+    }
+    
+    .backgroundVideo {
+              display: none;
+    }
+    .backgroundVideoMobile {
+        display: block;
+        background-size: contain;
+        width: 100% !important;
+        height: auto !important;
+        z-index: 100;
+    }
+    .videoPartSections {
+        h2 {
+            font-size: 20px;
+            line-height: 20px;
+        }
+
+        .videoBottomPart {
+            gap:0;
+            h3 {
+                font-size: 20px;
+                line-height: 20px;
+                min-height: auto;
+                margin-bottom: 10px;
+            }
+            a{
+                display: none;
+            }
+        }
+    }
+}

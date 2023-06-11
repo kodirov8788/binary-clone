@@ -1,0 +1,88 @@
+@import "../../variables";
+.faq__dark{
+    background-color: $main-theme-dark;
+    color: $main-text-color;
+}
+.faq__light{
+    background-color: $main-theme-white;
+    color: $main-theme-dark;
+}
+.faq {
+    padding: 97px 130px;
+    width: 100%;
+    min-height: 100vh;
+    font-family: $font-sfpro-bold;
+    box-sizing: border-box;
+    position: relative;
+
+    .faq__child {
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+
+        h2 {
+            max-width: 500px;
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 32px;
+
+            img {
+                width: 28px;
+            }
+        }
+    }
+
+    .faq__btn__wrapper {
+        position: absolute;
+        bottom: 60px;
+    }
+}
+
+.accordion {
+    font-family: $font-sfpro-regular;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: 392px;
+    max-width: 420px;
+}
+
+.accordion::-webkit-scrollbar {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .faq {
+        padding: 127px 19px;
+        .faq__btn__wrapper {
+            right: 30%;
+            margin-left: 100px;
+        }
+    }
+
+    .faq__child {
+        flex-direction: column;
+        align-items: center;
+        h2{
+            text-align: center;
+            font-size: 28px !important;
+            img{
+                width: 24px !important; 
+            }
+        }
+    }
+    .accordion{
+        margin: 82px 0 0 0;
+    }
+}
+@media only screen and (max-width: 375px){
+    .faq__child{
+        h2{
+            font-size: 20px !important;
+            img{
+                width: 18px !important;
+            }
+        }
+    }
+}

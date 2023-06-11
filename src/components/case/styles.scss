@@ -1,0 +1,59 @@
+@import "../../variables";
+
+@media only screen and (max-width: 768px) {
+    .swiper {
+        width: 100%;
+        height: 345px;
+        text-align: center;
+        margin: 65px 0 127px 0;
+    }
+
+    .swiper-css-mode>.swiper-wrapper>.swiper-slide {
+        scroll-snap-align: none;
+    }
+
+    .swiper-slide {
+        box-sizing: border-box;
+        padding: 60px 15px;
+        width: 100%;
+        min-width: 293px;
+        background-color: #1E1E1E;
+        height: 295px;
+
+        &:first-child {
+            margin-left: 41px;
+        }
+
+
+        img {
+            width: 90%;
+            height: 120px;
+        }
+
+        p {
+            margin-top: 30px;
+            font-size: 14px;
+            opacity: 0.6;
+        }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: inherit;
+        top: 97%;
+
+    }
+
+    .swiper-button-next {
+        right: 25%;
+    }
+
+    .swiper-button-prev {
+        left: 25%;
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        font-size: 20px;
+    }
+}

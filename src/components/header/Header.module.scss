@@ -1,0 +1,133 @@
+@import "../../variables";
+
+.header {
+  color: $main-text-color;
+  font-family: $font-sfpro-light;
+  padding: $padding-container;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  transition: $transition-time;
+
+  &>button {
+    display: none;
+  }
+
+  &.headerActive {
+    background-color: #00000070;
+
+
+    ul>li>a {
+      color: white;
+      text-decoration: none;
+      opacity: $text-font-opacity;
+
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    width: 30%;
+    // border: 2px solid white;
+    // justify-content: space-between;
+    gap: 30px;
+    margin-right: 200px;
+
+
+    .header_language {
+      position: relative;
+      margin-right: 40px;
+      margin-top: -5px;
+    }
+
+    li {
+      position: relative;
+
+      a {
+        color: $main-text-color;
+        text-decoration: none;
+        opacity: $text-font-opacity;
+        white-space: nowrap;
+
+        &:hover {
+          opacity: 1;
+        }
+
+      }
+    }
+  }
+
+
+  .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+
+    cursor: pointer;
+
+    h1 {
+      letter-spacing: 5px;
+      margin-left: 12px;
+      font-size: 18px;
+
+    }
+  }
+}
+
+@media only screen and (max-width:956px) {
+  .header {
+    background: #000;
+    display: flex;
+    width: 100%;
+    padding: 0;
+
+    button {
+      display: flex;
+      position: absolute;
+
+      background: none;
+      border: none;
+      cursor: pointer;
+      border: 2px solid transparent;
+
+      img {
+        left: 24px;
+      }
+
+      &:active {
+        border: 2px solid white;
+
+      }
+    }
+
+    ul {
+      display: none;
+    }
+
+    .logo {
+      margin: auto;
+      display: flex;
+      align-items: center;
+
+      // width: 100%;
+      // border: 2px solid wheat;
+      h1 {
+        font-size: 24px;
+        margin-top: 5px;
+
+      }
+    }
+  }
+}

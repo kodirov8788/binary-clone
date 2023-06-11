@@ -1,0 +1,609 @@
+.casecolection {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    gap: 65px;
+    position: relative;
+    // justify-content: space-evenly;
+}
+
+.womenPic {
+    grid-area: women1;
+    width: 162px;
+    height: 434px;
+
+    &:hover {
+        img {
+            transform: scale(1.1);
+            transition: all .5s ease-in-out;
+        }
+    }
+}
+
+.womenPic2 {
+    grid-area: women2;
+    width: 248px;
+    height: 117px;
+
+    &:hover {
+        img {
+            transform: scale(1.1);
+            transition: all .5s ease-in-out;
+        }
+    }
+}
+
+.cameraPic {
+    grid-area: camera;
+    width: 246px;
+    height: 307px;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    &:hover {
+        img {
+            transform: scale(1.1);
+            transition: all .5s ease-in-out;
+        }
+    }
+}
+
+.geeniPic {
+    grid-area: geeni;
+    width: 248px;
+    height: 307px;
+
+    &:hover {
+        img {
+            transform: scale(1.1);
+            transition: all .5s ease-in-out;
+        }
+    }
+}
+
+.aromaPic {
+    grid-area: aroma;
+    width: 248px;
+    height: 307px;
+
+    &:hover {
+        img {
+            transform: scale(1.1);
+            transition: all .5s ease-in-out;
+        }
+    }
+}
+
+.pizaPic {
+    margin-top: -30px;
+    grid-area: piza;
+    width: 420px;
+    height: 337px;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    &:hover {
+        img {
+            transform: scale(1.1);
+            transition: all .5s ease-in-out;
+        }
+    }
+}
+
+.starbuckPic {
+    grid-area: starbuck;
+    width: 246px;
+    height: 307px;
+
+    &:hover {
+        img {
+            transform: scale(1.1);
+            transition: all .5s ease-in-out;
+        }
+    }
+}
+
+.starbuckLittlePic {
+    grid-area: starbuck2;
+    width: 161px;
+    height: 307px;
+
+    &:hover {
+        img {
+            transform: scale(1.1);
+            transition: all .5s ease-in-out;
+        }
+    }
+}
+
+.womenTonguePic {
+    grid-area: womenT;
+    width: 248px;
+    height: 307px;
+
+    &:hover {
+        img {
+            transform: scale(1.1);
+            transition: all .5s ease-in-out;
+        }
+    }
+}
+
+.startbuckLargePic {
+    grid-area: starbuck3;
+    width: 246px;
+    height: 467px;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    &:hover {
+        img {
+            transform: scale(1.1);
+            transition: all .5s ease-in-out;
+        }
+    }
+}
+
+.geeniPic2 {
+    grid-area: geeni2;
+    width: 246px;
+    height: 307px;
+
+    &:hover {
+        img {
+            transform: scale(1.1);
+            transition: all .5s ease-in-out;
+        }
+    }
+}
+
+.pizaLittlePic {
+    grid-area: piza2;
+    width: 161px;
+    height: 307px;
+
+    &:hover {
+        img {
+            transform: scale(1.1);
+            transition: all .5s ease-in-out;
+        }
+    }
+}
+
+.cameraPic2 {
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    &:hover {
+        img {
+            transform: scale(1.1);
+            transition: all .5s ease-in-out;
+        }
+    }
+}
+
+.pizaPic2 {
+    width: 420px;
+    height: 307px;
+
+    &:hover {
+        img {
+            transform: scale(1.1);
+            transition: all .5s ease-in-out;
+        }
+    }
+}
+
+.collectionBanner {
+    height: 1417px;
+    width: 676px;
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+        "women1 women1  women2 women2 women2   camera camera camera"
+        "women1 women1  geeni geeni geeni camera camera camera"
+        "women1 women1 geeni geeni geeni aroma aroma aroma"
+        " piza piza piza piza piza aroma aroma aroma"
+        " piza piza piza piza piza  starbuck starbuck starbuck"
+        " starbuck2 starbuck2   womenT womenT womenT    starbuck starbuck starbuck "
+        " starbuck2 starbuck2   womenT womenT womenT    starbuck3 starbuck3 starbuck3"
+        "geeni2 geeni2 geeni2  piza2  piza2   starbuck3 starbuck3 starbuck3"
+        "geeni2 geeni2 geeni2  piza2  piza2   starbuck3 starbuck3 starbuck3"
+    ;
+}
+
+.collectionBanner2 {
+    margin-top: 10px;
+    display: flex;
+    width: 676px;
+    gap: 10px;
+}
+
+.collectionAll {
+    animation: banner 40s linear alternate infinite forwards;
+}
+
+@keyframes banner {
+    from {
+        margin-top: 0;
+    }
+
+    to {
+        margin-top: calc(-1734px + 100vh)
+    }
+}
+
+
+.bannerText {
+    margin-top: 97px;
+    height: 560px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+    div {
+        display: grid;
+        gap: 30px;
+
+        h3 {
+            font-family: 'sfpro-bold';
+            font-size: 36px;
+            line-height: 43px;
+        }
+
+        p {
+            color: rgb(96, 96, 96);
+            font-family: 'sfpro-regular';
+        }
+
+        a {
+            width: 205px !important;
+        }
+    }
+}
+
+
+@media only screen and (max-width:1191px) {
+    .casecolection {
+        position: relative;
+    }
+
+    .bannerText {
+        right: 25px;
+        position: absolute;
+        height: 560px;
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 1019px) {
+    .casecolection {
+        background: black;
+    }
+
+    .bannerText {
+        margin-top: 97px;
+        height: 560px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+
+        div {
+            display: grid;
+            gap: 30px;
+
+            h3 {
+                display: none;
+            }
+
+            p {
+                display: none;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:678px) {
+    .casecolection {
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        gap: 65px;
+        position: relative;
+        // justify-content: space-evenly;
+    }
+
+    .collectionAll {
+        width: 100%;
+        animation: banner 15s linear alternate infinite forwards;
+    }
+
+    .womenPic {
+        grid-area: women1;
+        width: auto;
+        height: auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .womenPic2 {
+        grid-area: women2;
+        width: auto;
+        height: auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .cameraPic {
+        grid-area: camera;
+        width: auto;
+        height: auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .geeniPic {
+        grid-area: geeni;
+        width: auto;
+        height: auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .aromaPic {
+        grid-area: aroma;
+        width: auto;
+        height: auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .pizaPic {
+        margin-top: 0px;
+        grid-area: piza;
+        width: auto;
+        height: auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .starbuckPic {
+        grid-area: starbuck;
+        width: auto;
+        height: auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .starbuckLittlePic {
+        grid-area: starbuck2;
+        width: auto;
+        height: auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .womenTonguePic {
+        grid-area: womenT;
+        width: auto;
+        height: auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .startbuckLargePic {
+        grid-area: starbuck3;
+        width: auto;
+        height: auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .geeniPic2 {
+        grid-area: geeni2;
+        width: auto;
+        height: auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .pizaLittlePic {
+        grid-area: piza2;
+        width: auto;
+        height: auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .cameraPic2 {
+        width: auto;
+        height: auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .pizaPic2 {
+        width: auto;
+        height: auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .collectionBanner {
+        height: auto;
+        width: 100%;
+        display: grid;
+        gap: 10px;
+        grid-template-areas:
+            "women1 women1  women2 women2 women2   camera camera camera"
+            "women1 women1  geeni geeni geeni camera camera camera"
+            "women1 women1 geeni geeni geeni aroma aroma aroma"
+            " piza piza piza piza piza aroma aroma aroma"
+            " piza piza piza piza piza  starbuck starbuck starbuck"
+            " starbuck2 starbuck2   womenT womenT womenT    starbuck starbuck starbuck "
+            " starbuck2 starbuck2   womenT womenT womenT    starbuck3 starbuck3 starbuck3"
+            "geeni2 geeni2 geeni2  piza2  piza2   starbuck3 starbuck3 starbuck3"
+            "geeni2 geeni2 geeni2  piza2  piza2   starbuck3 starbuck3 starbuck3"
+        ;
+    }
+
+    .collectionBanner2 {
+        margin-top: 10px;
+        display: flex;
+        width: 100%;
+        height: auto;
+        gap: 10px;
+    }
+
+    @keyframes banner {
+        from {
+            margin-top: 0;
+        }
+
+        to {
+            margin-top: calc(-1000px + 100vh)
+        }
+    }
+
+
+}
+
+@media only screen and (max-width:660px) {
+    .bannerText {
+        width: 100% !important;
+
+        div {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            a {
+                width: 140px !important;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+// @media only screen and (max-width:678px) {
+//     .casecolection {
+//         width: 100%;
+//         height: 100vh;
+//         display: flex;
+//         flex-direction: column;
+//         gap: 25px;
+//         // justify-content: space-evenly;
+//     }
+
+//     .collectionAllWrapper {
+//         height: 450px !important;
+//         width: 100% !important;
+//         overflow: hidden;
+//     }
+
+//     .collectionAll {
+//         animation: banner 40s linear alternate infinite forwards;
+//     }
+
+//     @keyframes banner {
+//         from {
+//             margin-top: 0;
+//         }
+
+//         to {
+//             margin-top: calc(-1734px + 350px)
+//         }
+//     }
+
+
+//     .bannerText {
+//         position: inherit;
+//         padding-inline: 30px;
+//         margin-top: 0px;
+//         height: 560px;
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: space-between;
+
+
+//         div {
+//             display: grid;
+//             gap: 30px;
+
+//             h3 {
+//                 font-family: 'sfpro-bold';
+//                 font-size: 36px;
+//                 line-height: 43px;
+//             }
+
+//             p {
+//                 color: rgb(96, 96, 96);
+//             }
+
+//             a {
+//                 width: 200px !important;
+//                 margin-bottom: 25px;
+//             }
+//         }
+//     }
+
+
+// }

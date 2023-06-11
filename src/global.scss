@@ -1,0 +1,64 @@
+@import "reset";
+@import "./variables";
+@import "./font";
+
+.btns {
+    text-decoration: none;
+    color: #fff;
+    background: $secondary-theme-dark;
+    font-family: $font-sfpro-light;
+    text-align: center;
+    border: 1px solid white;
+    font-size: $btn-font-size;
+    padding: 12px 30px;
+    display: flex;
+    transform: skew(-21deg);
+    align-items: center;
+    transition: 0.5s;
+    width: fit-content;
+
+    span {
+        display: inline-block;
+        transform: skew(21deg);
+        transition: 0.5s;
+        margin-right: 16px;
+        white-space: nowrap;
+    }
+
+    img {
+        transform: skew(21deg);
+
+    }
+
+    &:active {
+        border-radius: 40px;
+        transition: 0.5s;
+
+        span {
+            transition: 0.5s;
+            color: rgba(212, 212, 212, 0.63);
+        }
+    }
+}
+
+@media only screen and (max-width:660px) {
+    .btns {
+        font-size: 18px;
+        padding: 10px 22px;
+
+        span {
+            margin-right: 12px;
+        }
+    }
+}
+
+@media only screen and (max-width:475px) {
+    .btns {
+        font-size: 16px;
+        padding: 8px 16px;
+
+        span {
+            margin-right: 8px;
+        }
+    }
+}

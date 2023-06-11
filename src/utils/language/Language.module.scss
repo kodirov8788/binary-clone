@@ -1,0 +1,42 @@
+.dropdown {
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .1);
+    background-color: white;
+    position: absolute;
+    left: -30px;
+    top: 0;
+
+    .dropdown_header {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        color: black;
+        padding: 0 5px;
+    }
+
+    .dropdown_img {
+        width: 30px;
+        margin-right: 5px;
+    }
+
+    .dropdown_body {
+        padding: 5px;
+        display: none;
+
+        &.open {
+            display: block;
+        }
+
+        .dropdown_item {
+            color: black;
+            display: flex;
+            align-items: center;
+
+
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

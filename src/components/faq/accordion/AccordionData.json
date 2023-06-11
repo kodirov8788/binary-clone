@@ -1,0 +1,38 @@
+[
+    {
+        "id": "1",
+        "title": "Можно довериться?",
+        "title_uz": "Ishonishingiz mumkinmi?",
+        "title_en": "Can you trust?",
+        "content_uz": "Biz IT sohasida ko'p ⏳ yillik tajriba va professional bilimga egamiz.",
+        "content_en": "We have many ⏳ years of experience and professional knowledge in the field of IT.",
+        "content": "Мы обладаем многолетним ⏳ опытом и профессиональными знаниями в сфере ИТ."
+    },
+    {
+        "id": "2",
+        "title": "Нормально получится?",
+        "title_uz": "Bu normal ishlaydimi?",
+        "title_en": "Will it work out normally?",
+        "content_uz": "Biz har doim har bir mijozning ehtiyojlarini 🔎 va talablarini 📃 tushunishga harakat qilamiz va ularning biznes ehtiyojlariga eng mos keladigan ♻︎ yechimni ishlab chiqamiz.",
+        "content_en": "We always try to understand the needs 🔎 and requirements 📃 of each client and develop a solution ♻︎ that best suits their business needs.",
+        "content": "Мы всегда стараемся понять потребности 🔎 и требования 📃каждого клиента и разработать решение ♻︎ , которое наилучшим образом соответствует их бизнес-задачам."
+    },
+    {
+        "id": "3",
+        "title": "Какие гарантии?",
+        "title_uz": "Qanday kafolatlar?",
+        "title_en": "What guarantees?",
+        "content_uz": "Biz xizmatlarimizning 💯 yuqori ishonchliligi va xavfsizligini kafolatlaymiz.",
+        "content_en": "We guarantee 💯 high reliability and safety of our services.",
+        "content": "Мы гарантируем 💯 высокую надежность и безопасность наших услуг. "
+    },
+    {
+        "id": "4",
+        "title": "А че так дорого?",
+        "title_uz": "Nega bunchalik qimmat?",
+        "title_en": "Why so expensive?",
+        "content_uz": "Xizmatlarimiz uchun raqobatbardosh narxlar 💰 taklif etamiz.",
+        "content_en": "We offer competitive prices 💰 for our services.",
+        "content": "Мы предлагаем конкурентоспособные цены 💰 на наши услуги."
+    }
+]
