@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next';
 function Contactbanner() {
     const { t } = useTranslation();
     return (
-        <div className={style.contactbanner}>
+        <div className={style.contactbanner} id='contactbanner'>
             <div className={style.contactbanner__container}>
                 <div className={style.contactbanner__wrapper}>
                     <h2>{t("contact")}  📡</h2>

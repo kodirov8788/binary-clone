@@ -7,7 +7,10 @@ import ScrollRoute from '../../utils/scrollroute/Scrollroute';
 import { Container } from '../../utils/Components';
 import { useLocation } from 'react-router-dom';
 import Language from "../../utils/language/Language"
+import { useTranslation } from 'react-i18next';
+
 const Footer = () => {
+  const { t } = useTranslation();
   const [idRoute, setIdRoute] = useState("footer")
   let location = useLocation().pathname
 
@@ -16,6 +19,8 @@ const Footer = () => {
       setIdRoute("casefooter")
     } else if (location === "/service") {
       setIdRoute("servicefooter")
+    } else if (location === "/contact") {
+      setIdRoute("contactfooter")
     } else {
       setIdRoute("footer")
     }
@@ -26,22 +31,21 @@ const Footer = () => {
     <div className={style.footer} id={idRoute}>
       <Container>
         <div className={style.footer__container}>
-          <h1>Мы расположены <img src={office} alt="" /></h1>
+          <h1> {t("ourLocation")}<img src={office} alt="" /></h1>
           <div className={style.branches}>
             <div className={style.branches__name}>
               <ul>
                 <li>
-                  <h2>Офис</h2>
-                  <p>Uzbekistan, Tashkent, Gulabad 13</p>
+                  <h2> {t("office")}</h2>
+                  <p> {t("location")}</p>
                 </li>
                 <li>
-                  <h2>Телефон</h2>
+                  <h2> {t("number")}</h2>
                   <p>+998 99 978-75-25</p>
                 </li>
                 <li>
-                  <h2>Соц. Сети</h2>
+                  <h2> {t("social")}</h2>
                   <p>Facebook Telegram
-                    <br />
                     Instagram LinkedIn</p>
                 </li>
                 <li className={style.footer_language}>
@@ -61,12 +65,11 @@ const Footer = () => {
                 title='binary'></iframe>
             </div>
           </div>
-        </div>
-        <div className={style.footer__conclusion}>
-          <span>Начните воплощать мечту</span> <img className={style.conclusion_starts} src={stars} alt="" />
-          <br />
-          <span>в реальность</span> <img className={style.conclusion_man} src={man} alt="" /> <span>в
-            месте с нами</span>
+          <div className={style.footer__conclusion}>
+            <h3>{t("footerText1")}<img className={style.conclusion_stars} src={stars} alt="stars" />
+              {t("footerText2")}<img className={style.conclusion_man} src={man} alt="a man " />
+              {t("footerText3")}</h3>
+          </div>
         </div>
         <ScrollRoute routeName={idRoute} />
       </Container>

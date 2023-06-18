@@ -24,8 +24,8 @@ const Language = () => {
     useEffect(() => {
         const getLang = () => {
             let lg = window.localStorage.getItem("i18nextLng")
-            if (selectedItem.label.toLowerCase().slice(0, 2) != lg) {
-                let lan = data.find(li => li.label.toLowerCase() == lg.slice(0, 2).toLowerCase())
+            if (selectedItem.label.toLowerCase().slice(0, 2) !== lg) {
+                let lan = data.find(li => li.label.toLowerCase() === lg.slice(0, 2).toLowerCase())
                 setSelectedItem(lan)
             }
         }

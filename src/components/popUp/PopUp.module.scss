@@ -12,7 +12,7 @@ $in-w2: $n-char*($char-w + $gap2);
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(255, 255, 255, 0.459);
+    background-color: #ffffff75;
     z-index: 1;
 
     .popUpHideLayer {
@@ -31,66 +31,99 @@ $in-w2: $n-char*($char-w + $gap2);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 64%;
-    min-height: 70%;
+    width: 78%;
+    height: 80%;
     box-sizing: border-box;
-    background-color: $main-theme-f2;
-    padding: $padding-container;
-    padding-top: 97px;
+    background-color: $secondary-theme-dark;
+    border-radius: 16px;
     font-family: $font-sfpro-bold;
     position: relative;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    position: relative;
+    justify-content: space-between;
+    padding: 10px;
 
-    .backButton {
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        height: 25px;
-        padding: 10px;
-        color: rgb(0, 0, 0);
-        border: 2px solid black;
-        border-radius: 50%;
-        z-index: 9999;
+    .popUp__left {
+        padding: 40px;
+        border-radius: 10px;
+        background-color: $main-theme-dark;
+        width: 49.5%;
+        color: gray;
+    }
+
+    .popUp__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: end;
+        background-image: url("../../assets/popup.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        width: 49.5%;
+
+        img {
+            margin: 15px 15px 0 0;
+            cursor: pointer;
+        }
     }
 
     .text {
-        font-weight: 650;
-        font-size: 42px;
-        max-width: 682px;
-        line-height: 50px;
-        color: black;
-    font-family: 'sfpro-regular';
-}
+        display: flex;
+        flex-direction: column;
+        font-size: 18px;
+        gap: 8px;
 
-    img {
-        height: 35px;
+        h2 {
+            font-weight: 700;
+            font-size: 54px;
+            line-height: 50px;
+            color: $main-text-color;
+            font-family: $font-sfpro-bold;
+        }
+
     }
 
     form {
-        margin-top: 60px;
+        margin-top: 27px;
         display: flex;
         gap: 60px;
-        flex-wrap: wrap;
-        flex: 1;
+        max-width: 320px;
 
         .formNameTaker {
             display: flex;
             flex-direction: column;
-            gap: 40px;
-            position: relative;
-           input{
-            max-width: 320px;
-           }
+            gap: 30px;
+            width: 100%;
+
+            textarea {
+                background-color: transparent;
+                border: none;
+                font-size: 16px;
+                width: 100%;
+                outline: none;
+                resize: vertical;
+                max-height: 80px;
+                font-family: $font-sfpro-regular;
+                color: #FFFFFF !important;
+                border-bottom: 2px solid #ffffff;
+
+                &::placeholder {
+                    color: rgb(255, 255, 255);
+                }
+
+                &:focus {
+                    border: 1px solid #FFFFFF;
+                }
+            }
+
             .numberInput {
-                font-size: 30px !important;
+                font-size: 24px !important;
                 display: block;
                 border: none;
                 outline: none;
-                padding: 0;
-                width: $in-w;
+                width: 100%;
+                color: #FFFFFF;
                 background: repeating-linear-gradient(90deg,
                     dimgrey 0, dimgrey $char-w,
                     transparent 0, transparent $char-w + $gap) 0 100%/ #{$in-w - $gap} 2px no-repeat;
@@ -101,190 +134,99 @@ $in-w2: $n-char*($char-w + $gap2);
 
         .numberCode {
             display: flex;
-            top: 165px;
-            font-size: 30px;
-    font-family: 'sfpro-regular';
+            align-items: center;
+            font-size: 24px;
+            font-family: $font-sfpro-regular;
 
-        }
 
-        .radioTaker {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-
-            textarea {
-                background-color: $main-theme-f2;
-                border: none;
-                font-size: 16px;
-                width: 320px;
-                border-bottom: 1px solid rgb(189, 186, 186);
-                outline: none;
-                height: 33px;
-                margin-bottom: 25px;
-                resize: vertical;
-                max-height: 80px;
-                min-height: 33px;
-    font-family: 'sfpro-regular';
-                
-                &:focus {
-                    border-bottom: 1px solid rgb(12, 12, 12);
-                }
-            }
-
-            label {
-                color: rgb(0, 0, 0);
-    font-family: 'sfpro-regular';
-                  
-                &:hover {
-                    color: rgb(136, 136, 136);
-                }
-
+            h3 {
+                color: #FFFFFF;
             }
         }
     }
 
 }
+
 
 .buttonElement {
-    margin-left: auto;
-    margin-bottom: 25px;
-    margin-top: 25px;
+    margin: 0 auto;
+    padding: 30px;
 }
 
 
-@media only screen and (max-width: 1340px) {
+@media only screen and (max-width: 1100px) {
     .popUp {
-        padding-inline: 50px;
-        padding-top: 40px;
-    }
-}
-
-@media only screen and (max-width:1090px) {
-    .popUp {
-        .backButton {
-            height: 20px;
-            padding: 10px;
-            border: 2px solid black;
-        }
         .text {
-            font-size: 36px;
-        }
-
-        img {
-            height: 30px;
-        }
-
-        form {
-            gap: 40px;
-            .formNameTaker .numberInput {
-                font-size: 25px !important;
-            }
-
-            .numberCode {
-                font-size: 25px;
+            h2 {
+                font-size: 62px;
+                margin-top: 0;
             }
         }
     }
+
+    .buttonElement {
+        padding: 30px 20px;
+    }
 }
-@media only screen and (max-width:956px) {
+
+@media only screen and (max-width: 850px) {
     .popUp {
-        .backButton {
-            height: 20px;
-            padding: 5px;
-            border: 2px solid black;
+        .popUp__left {
+            padding: 20px;
         }
-        .text {
-            font-size: 30px;
-            line-height: 35px;
-        }
-        img {
-            height: 27px;
-        }
-        form {
-            margin-top: 20px;
-            gap: 40px;
-            .formNameTaker .numberInput {
-                font-size: 22px !important;
-            }
+    }
+}
 
-            .numberCode {
-                font-size: 22px;
-            }
-        }
-    }
-}
-@media only screen and (max-width:660px) {
+@media only screen and (max-width: 768px) {
     .popUp {
-        .backButton {
-            height: 15px;
-            padding: 5px;
-            border: 2px solid black;
-        }
+        gap: 0;
+        position: relative;
+
         .text {
-            font-size: 20px;
-            line-height: 25px;
-        }
-        img{
-            height: 22px;
-        }
-        form {
-            margin-top: 20px;
-            gap: 0px;
-            .formNameTaker{
-                width: 100%;
-                overflow: hidden;
-                gap: 20px;
-                height: 150px;
-                .numberInput{
-                    font-size: 18px !important;
-                    width: 100%;
-                }
-            }
-            .radioTaker{
-                width: 100%;
-                textarea {
-                width: 100%;
-                margin-bottom: 0;
-            }}
-            
-            .numberCode {
-                font-size: 18px;
-                color: rgb(49, 49, 49);
+            h2 {
+                font-size: 42px;
+                line-height: 30px;
             }
         }
-    }
-}
-@media only screen and (max-width:475px) {
-   .popUp{
-    .text{
-        font-size: 16px;
-    }
-    img{
-        height: 16px;
-    }
-    form{
-        .formNameTaker{
+
+        .popUp__left {
             width: 100%;
-                overflow: hidden;
-                .numberInput {
-                    
-                    width: $in-w2;
-                    background: repeating-linear-gradient(90deg,
-                        dimgrey 0, dimgrey $char-w,
-                        transparent 0, transparent $char-w + $gap2) 0 100%/ #{$in-w2 - $gap2} 2px no-repeat;
-                    letter-spacing: $gap;
-                    margin-left: 10px;
-                }
+            background-color: #363535a1;
+            height: 100%;
+            padding: 20px;
+            color: #FFFFFF;
+            background-image: url("../../assets/popup.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
         }
-        .radioTaker{
-           textarea{
-  width: 100%;
-           } 
-           label{
-            font-size: 14px;
-           }
+
+        .popUp__right {
+            width: 0;
+
+            &>img {
+                position: absolute;
+                top: 25px;
+                right: 25px;
+            }
+
+            .buttonElement {
+                position: absolute;
+                bottom: 15px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        .text {
+            form {
+                .formNameTaker {
+                    textarea {
+                        color: #FFFFFF;
+                    }
+                }
+            }
         }
     }
-   }
-  }
-  
+}

@@ -2,10 +2,11 @@
 
 .mediasidebar {
     width: 100%;
-    height: calc(100vh - 60px);
     position: fixed;
-    bottom: 0;
+    top: 0;
     left: 0;
+    bottom: 0;
+    right: 0;
     background-color: #000000a1;
     z-index: 1000;
     transform: translateX(-2000px);
@@ -46,16 +47,15 @@
 
 .mediasidebar button {
     position: absolute;
-    top: 0;
+    top: 70px;
     border: none;
     background: none;
-    width: 50px;
-    height: 50px;
-    background-color: white;
+    width: 40px;
+    height: 40px;
+    // background-color: white;
     padding: 10px;
     border-radius: 50px;
     right: 20px;
-    top: 20px;
     transition: .3s;
     transform: translateX(-2000px);
 }

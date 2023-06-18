@@ -88,9 +88,23 @@ function ScrollRoute({ routeName }) {
             nav_title: "footer",
             route: "servicefooter"
         },
+        {
+            id: 17,
+            nav_title: "contactbanner",
+            route: "contactbanner"
+        },
+        {
+            id: 18,
+            nav_title: "contactdetails",
+            route: "contactdetails"
+        },
+        {
+            id: 19,
+            nav_title: "footer",
+            route: "contactfooter"
+        },
     ];
 
-    // console.log(navData.slice(11, 14))
     useEffect(() => {
         switch (routeName) {
             case "banner":
@@ -164,16 +178,29 @@ function ScrollRoute({ routeName }) {
                 setNavIndex(1)
                 setColor("black")
                 break;
-            case "servicefaq":
-                setNavRoute(navData.slice(13, 16))
-                setNavIndex(2)
-                // setColor("black")
-                break;
             case "servicefooter":
                 setNavRoute(navData.slice(13, 16))
                 setNavIndex(2)
+                break;
+            case "contactbanner":
+                setNavRoute(navData.slice(16, 19))
+                setNavIndex(0)
                 // setColor("black")
                 break;
+            case "contactdetails":
+                setNavRoute(navData.slice(16, 19))
+                setNavIndex(1)
+                // setColor("black")
+                break;
+            case "contactfooter":
+                setNavRoute(navData.slice(16, 19))
+                setNavIndex(2)
+                // setColor("black")
+                break;
+            default:
+                setNavRoute(navData.slice(0, 13))
+                setNavIndex(0)
+                break
         }
     }, [routeName])
     return (

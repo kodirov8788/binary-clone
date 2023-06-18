@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next';
 function Contactdetails() {
     const { t } = useTranslation();
     return (
-        <div className={style.contactdetails}>
+        <div className={style.contactdetails} id='contactdetails'>
             <div className={style.contactbanner__container}>
                 <div className={style.contactbanner__wrapper}>
                     <h2> {t("cDetailText")} <img src={watches} alt="watch" />
@@ -53,6 +53,7 @@ function Contactdetails() {
                     </div>
                 </div>
             </div>
+            <ScrollRoute routeName={"contactdetails"} />
         </div>
     )
 }

@@ -2,26 +2,31 @@
 
 .mainInput {
     border: none;
-    border-bottom: 1px solid rgb(189, 186, 186);
+    border-bottom: 0.5px solid rgb(129, 129, 129);
     outline: none;
     background-color: $main-theme-f2;
     height: 35px;
-    width: 320px;
+    width: 100%;
     font-family: 'sfpro-regular';
+    color: aliceblue;
+    background-color: transparent;
+
+    &::placeholder {
+        color: rgb(255, 255, 255);
+    }
 
     &:focus {
-        border-bottom: 1.2px solid rgb(0, 0, 0);
+        border-bottom: 1.2px solid rgb(255, 255, 255);
     }
 }
 
 .container {
+    width: 100%;
     padding: $padding-container;
     padding-top: 90px;
 }
 
 @media only screen and (max-width:1000px) {
-
-
     .container {
         padding: 0 20px;
         padding-top: 60px;
@@ -30,7 +35,7 @@
 
 @media only screen and (max-width:660px) {
     .mainInput {
-        width: 120%;
+        width: 100% !important;
     }
 
     .container {
@@ -42,5 +47,10 @@
 @media only screen and (max-width:475px) {
     .mainInput {
         width: 100%;
+    }
+
+    .container {
+        padding: 0 10px;
+        padding-top: 60px;
     }
 }

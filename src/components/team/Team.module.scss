@@ -1,21 +1,26 @@
 @import "../../variables";
 
 .team {
-    width: 100%;
     min-height: 100vh;
-
-    // border: 2px solid blue;
+    width: 100%;
     box-sizing: border-box;
     position: relative;
-    background-color: $main-theme-white;
+    // background-color: $main-theme-white;
+    // border: 3px solid black;
+    overflow-x: hidden;
+    margin: auto;
 
 
     .team_container {
+        width: 80%;
         display: flex;
         justify-content: space-between;
+        // border: 3px solid black;
+        // margin: auto;
+        // background-color: red;
 
         .team_left {
-            width: 45%;
+            width: 40%;
             margin-bottom: 60px;
 
             .team_dev {
@@ -282,7 +287,7 @@
 
         .team_container {
             height: 90vh;
-
+            width: 90%;
 
             .team_media_container {
                 display: flex;
@@ -290,6 +295,8 @@
                 flex-direction: column;
                 // border: 2px solid red;
                 height: 100%;
+                width: 100%;
+                margin-left: 10px;
 
 
 

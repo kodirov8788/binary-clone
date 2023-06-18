@@ -3,6 +3,7 @@ import style from "./Mediasidebar.module.scss"
 import iconx from "../../essets/xButton.svg"
 import { useTranslation } from 'react-i18next'
 import { gsap } from 'gsap'
+import Language from '../../utils/language/Language'
 
 function Mediasidebar({ setOpenCloseSidebar, openCloseSidebar }) {
 
@@ -12,6 +13,7 @@ function Mediasidebar({ setOpenCloseSidebar, openCloseSidebar }) {
     const div3 = useRef(null);
     const div4 = useRef(null);
     const div5 = useRef(null);
+    const div6 = useRef(null);
     useEffect(() => {
         const el1 = div1.current;
         gsap.fromTo(el1, { translateX: "-2000px" }, { translateX: openCloseSidebar ? "0" : "-2000px", transitionDelay: 0.2, opacity: 1 });
@@ -26,6 +28,9 @@ function Mediasidebar({ setOpenCloseSidebar, openCloseSidebar }) {
         const el5 = div5.current;
         gsap.fromTo(el5, { translateX: "-2000px" }, { translateX: openCloseSidebar ? "0" : "-2000px", transitionDelay: 0.4, opacity: 1 });
 
+        const el6 = div6.current;
+        gsap.fromTo(el6, { translateX: "-2000px" }, { translateX: openCloseSidebar ? "0" : "-2000px", transitionDelay: 0.5, opacity: 1 });
+
     }, [openCloseSidebar]);
     return (
         <div className={style.mediasidebar} style={openCloseSidebar ? { transform: "translateX(0px)" } : { transform: "translateX(-2000px)" }}>
@@ -34,16 +39,19 @@ function Mediasidebar({ setOpenCloseSidebar, openCloseSidebar }) {
                 <img src={iconx} alt="" /></button>
             <ul>
                 <li ref={div2}>
-                    <a href="#">{t("aboutus")}</a>
+                    <a href="/">{t("aboutus")}</a>
                 </li>
                 <li ref={div3}>
-                    <a href="#">{t("case")}</a>
+                    <a href="case">{t("case")}</a>
                 </li>
                 <li ref={div4}>
-                    <a href="#">{t("service")}</a>
+                    <a href="service">{t("service")}</a>
                 </li>
                 <li ref={div5}>
-                    <a href="#">{t("contact")}</a>
+                    <a href="contact">{t("contact")}</a>
+                </li>
+                <li ref={div6}>
+                    <Language />
                 </li>
             </ul>
         </div>

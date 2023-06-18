@@ -7,14 +7,19 @@
     height: 100vh;
     width: 100%;
     background-color: #2A2A2A;
-    overflow: hidden;
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .footer__container {
-    max-width: 100%;
+    width: 100%;
+    height: calc(100vh - 150px);
     margin: auto;
-    margin-bottom: 49px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
 
     &>h1 {
         font-family: $font-sfpro-bold;
@@ -23,7 +28,6 @@
         font-size: 42px;
         line-height: 32px;
         color: #FFFFFF;
-        margin-bottom: 60px;
 
         img {
             height: 36px;
@@ -35,50 +39,59 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    height: 50%;
 
-    .branches_googlemap {
-        width: 591px;
-        height: 353px
+    .branches__location {
+        width: 55%;
+        height: 100%;
+
+        .branches_googlemap {
+            width: 100%;
+            height: 100%
+        }
     }
 }
 
 .branches__name {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
 
     ul {
+        height: 100%;
         position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: calc(25% / 3);
 
         &>.dropdown {
             bottom: 0;
         }
 
         li {
+            height: 16%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
 
             h2 {
-                font-family: 'Encode Sans Expanded', sans-serif;
-                font-style: normal;
-                font-weight: 650;
+                font-family: 'sfpro-bold';
                 font-size: 24px;
                 line-height: 29px;
                 color: #FFFFFF;
-                flex: none;
-                order: 0;
-                flex-grow: 0;
-                margin-bottom: 10px;
             }
 
             p {
-                font-family: 'Montserrat';
-                font-style: normal;
-                font-weight: 400;
+                font-family: 'sfpro-light';
                 font-size: 18px;
                 line-height: 22px;
                 letter-spacing: 0.02em;
                 color: #FFFFFF;
                 opacity: 0.5;
-                flex: none;
-                order: 1;
-                flex-grow: 0;
-                margin-bottom: 30px;
             }
         }
 
@@ -89,96 +102,88 @@
     }
 }
 
-.footer__conclusion {
-    font-family: 'Encode Sans Expanded', sans-serif;
-    font-style: normal;
-    font-weight: 650;
+.footer__conclusion h3 {
+    font-family: 'sfpro-bold';
     font-size: 32px;
     line-height: 32px;
-    text-align: center;
     color: #FFFFFF;
-    padding-top: 10px;
+    max-width: 430px;
 
-    .conclusion_starts {
-        height: 30px;
-    }
-
-    .conclusion_man {
+    img {
         height: 30px;
     }
 }
 
-@media only screen and (max-width:956px) {
-    .footer__container {
-        margin-bottom: 0;
-        margin-bottom: 20px;
 
-        .branches {
-            align-items: start;
-            margin-left: 30px;
-
-            .branches_googlemap {
-                width: 560px;
-                height: 300px;
-                margin-top: 50px;
-
-            }
-        }
-    }
-}
-
-@media only screen and (max-width:840px) {
-    .footer__container {
-        .branches {
-            .branches_googlemap {
-                width: 460px;
-                height: 300px
-            }
-        }
-    }
-}
-
-@media only screen and (max-width:720px) {
-    .footer__container {
-        .branches {
-            .branches_googlemap {
-                width: 420px;
-                height: 260px
-            }
-        }
-    }
-}
-
-@media only screen and (max-width:660px) {
-    .footer__container {
-        .branches {
-            .branches_googlemap {
-                width: 320px;
-                height: 200px
-            }
-        }
-    }
-}
 
 @media only screen and (max-width:600px) {
     .footer__container {
         &>h1 {
-            font-size: 32px;
+            font-size: 28px;
+
+            img {
+                height: 24px;
+            }
         }
 
         .branches {
             display: flex;
-            justify-content: space-between;
-            align-items: start;
-
             flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+            height: 65%;
 
-            .branches_googlemap {
-                width: 100%;
-                height: 150px
+            .branches__location {
+                width: 80%;
+                height: 70%;
+
+                .branches_googlemap {
+                    width: 100%;
+                    height: 100%
+                }
             }
+
         }
 
 
+
+    }
+
+    .footer__conclusion h3 {
+        font-size: 24px;
+
+        img {
+            height: 24px;
+        }
+    }
+
+    .branches__name {
+        ul {
+            height: 80%;
+
+            &>.dropdown {
+                bottom: 0;
+            }
+
+            li {
+                height: 25%;
+                justify-content: flex-start;
+
+                h2 {
+                    font-size: 20px;
+                    line-height: 22px;
+                }
+
+                p {
+                    font-family: 'sfpro-light';
+                    font-size: 14px;
+                    line-height: 16px;
+                    letter-spacing: 0.02em;
+                    color: #FFFFFF;
+                    opacity: 0.5;
+                }
+            }
+        }
     }
 }

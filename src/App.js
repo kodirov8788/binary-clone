@@ -10,6 +10,7 @@ import { useState } from "react";
 
 function App() {
   const [openCloseSidebar, setOpenCloseSidebar] = useState(false)
+
   return (
     <BrowserRouter>
       <Header setOpenCloseSidebar={setOpenCloseSidebar} openCloseSidebar={openCloseSidebar} />
