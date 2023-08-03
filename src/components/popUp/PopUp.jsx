@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import style from "./PopUp.module.scss"
 import messageBox from "../../essets/messageBox.svg"
-import { CustomRadio, MainInput, MainLink } from '../../utils/Components';
+import { MainInput } from '../../utils/Components';
 import xIcon from "../../essets/xButton.svg"
 import { useTranslation } from 'react-i18next';
 import Axios from "../../api/api"
+
 const PopUp = () => {
   const { t } = useTranslation();
   const [show, setShow] = useState(false);
+  const [showLoad, setShowLoad] = useState(false);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -29,6 +31,7 @@ const PopUp = () => {
 
   const formAction = async (e) => {
     e.preventDefault()
+    setShowLoad(true)
     let name = e.target[0]?.value
     let email = e.target[1]?.value
     let number = e.target[2]?.value
@@ -59,18 +62,23 @@ const PopUp = () => {
                 }
               }} />
               </div>
-              <textarea placeholder={t("industry")} maxCols={5}></textarea>
+              <textarea required placeholder={t("industry")} maxCols={5}></textarea>
+              <div style={{ height: "45px", display: "flex", justifyContent: "center" }}> <button style={{ height: "100%" }} className='btns'> <span>Send  </span><img src={messageBox} alt="" /></button></div>
             </div>
-            <button>send</button>
           </form>
         </div>
         <div className={style.popUp__right}>
           <img className={style.xIcon} src={xIcon} alt="icon" onClick={hidePopupWindow} />
-          <div className={style.buttonElement} ><MainLink text={t("send")} icon={messageBox} link="#" /></div>
         </div>
 
       </div>
-
+      {setShow ?
+        <div style={{ position: "fixed", top: "0", left: "0", right: "0", bottom: "0", background: "gray", opacity: "0.7", display: showLoad ? "block" : "none", zIndex: "9999" }}>
+          <div className={style.loaderCircle}>Loading
+            <span></span>
+          </div>
+        </div> : ""
+      }
     </div > : <></>
   )
 }
