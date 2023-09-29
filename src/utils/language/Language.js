@@ -5,10 +5,10 @@ import usa from "../../assets/usa-flag.png"
 import russia from "../../assets/russia-flaf.png"
 import { useTranslation } from "react-i18next";
 const Language = () => {
-    const data = [{ id: 0, label: "UZ", flag: uzb }, { id: 1, label: "RU", flag: russia }, { id: 2, label: "EN", flag: usa }];
+    const data = [{ id: 0, label: "UZ", code: "uz", flag: uzb }, { id: 1, label: "RU", code: "ru", flag: russia }, { id: 2, label: "EN", code: "en", flag: usa }];
     const [isOpen, setOpen] = useState(false);
     const { i18n } = useTranslation();
-    const [selectedItem, setSelectedItem] = useState({ id: 0, label: "UZ", flag: uzb });
+    const [selectedItem, setSelectedItem] = useState({ id: 0, label: "UZ", code: "uz", flag: uzb });
     // console.log(selectedItem)
     const toggleDropdown = () => setOpen(!isOpen);
     const handleItemClick = (lang) => {
@@ -17,7 +17,7 @@ const Language = () => {
         toggleDropdown()
     }
     const changeLanguage = (lng) => {
-        i18n.changeLanguage(lng.label);
+        i18n.changeLanguage(lng.code);
     };
 
 
