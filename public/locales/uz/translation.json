@@ -28,7 +28,7 @@
     "bannerMainTextPart1": "Mamlakatingizdagi",
     "bannerMainTextPart2": "eng yaxshi dasturchilar va ",
     "bannerMainTextPart3": "designerlar jamoasi",
-    "bannerMore": "Ko'proq",
+    "bannerMore": "Biz haqimizda",
     "more": "Ko'proq",
     "cDetailText": "Sizga mos keladigan vaqtda biz bilan bog'lanishingiz mumkin.",
     "address": "Manzil",
@@ -44,5 +44,17 @@
     "sMobileText": "IOS, Android, mobil veb-ilovalar, mahalliy ilovalar va gibrid ilovalar.",
     "serviceUiUx": "UI/UX dizayni",
     "sUiUxText": "CRM (mijozlar bilan munosabatlarni boshqarish), SFA (savdo kuchlarini avtomatlashtirish), PM (loyihalarni boshqarish), HRM (inson resurslarini boshqarish), ERP (korxona resurslarini rejalashtirish), BPMS (biznes jarayonlarini boshqarish tizimi), LMS (taʼlimni boshqarish tizimi) va boshqalar.",
-    "wow": "Ajoyib!"
+    "wow": "Ajoyib!",
+    "decision": "Qaror qildingizmi?",
+    "desicionText": "Bizga yozing, biz sizga",
+    "answer": "Javob beramiz!",
+    "send": "Yuborish",
+    "name": "Ismingiz*",
+    "industry": "Sizning sohangiz",
+    "ourLocation": "Bizning joylashuvimiz",
+    "office": "Ofis",
+    "social": "Ijtimoiy tarmoqlar",
+    "footerText1": "Sizning orzularingizni ",
+    "footerText2": " haqiqatga aylantirishga ",
+    "footerText3": " yordam beramiz"
 }

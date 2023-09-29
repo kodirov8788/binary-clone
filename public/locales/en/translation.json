@@ -28,7 +28,7 @@
   "bannerMainTextPart1": "Team of the best",
   "bannerMainTextPart2": "programmers and",
   "bannerMainTextPart3": " designers in your country",
-  "bannerMore": "More",
+  "bannerMore": "About us",
   "more": "More",
   "cDetailText": "You can contact us whenever it suits you.",
   "address": "Address",
@@ -44,5 +44,17 @@
   "sMobileText": "IOS, Android, mobile web apps, native apps and hybrid apps..",
   "serviceUiUx": "Ux & Ui design",
   "sUiUxText": "CRM (Customer Relationship Management), SFA (Sales Force Automation), PM (Project Management), HRM (Human Resource Management), ERP (Enterprise Resource Planning), BPMS (Business Process Management System), LMS (Learning Management System), and other",
-  "wow": "Wow!"
+  "wow": "Wow!",
+  "decision": "Already Decided?",
+  "desicionText": "Write to us, we will",
+  "answer": "Answer!",
+  "send": "Send",
+  "name": "Your name*",
+  "industry": "Your industry",
+  "ourLocation": "Our location",
+  "office": "Office",
+  "social": "Social networks",
+  "footerText1": "Start turning your dream",
+  "footerText2": "into reality",
+  "footerText3": "with us"
 }
