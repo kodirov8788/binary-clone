@@ -17,9 +17,12 @@ import email from "./img/main-black.png"
 import phone from "./img/phone-black.png"
 import telegram from "./img/telegram-black.png"
 import linkedinblack from "./img/linkedin-black.png"
+import finger from "./img/finger.png"
+import fingerclick from "./img/finger-click.png"
 
 function Team() {
     const [selectedData, setSelectedData] = useState(team_data[0])
+    const [icon, setIcon] = useState(false)
     const selectDev = (id) => {
         const selected = team_data.find(item => item.id === id)
         setSelectedData(selected)
@@ -71,6 +74,20 @@ function Team() {
             }
         };
     }, []);
+
+    useEffect(() => {
+        if (icon) {
+            setTimeout(() => {
+                setIcon(false)
+            }, 1000);
+        } else {
+            setTimeout(() => {
+                setIcon(true)
+            }, 1000);
+        }
+    }, [icon])
+
+
 
     return (
         <div className={style.team} id='team'>
@@ -154,28 +171,15 @@ function Team() {
                                     key={index}
                                     ref={(el) => childRef.current.push(el)}
                                 >
-                                    <div className={style.team_media_item1}>
-                                        <img src={selectedData.image} alt="" />
+                                    <img src={child.image} alt="" />
+                                    <div className={style.team_media_text}>
+                                        <h1>{selectedData.name}</h1>
+                                        <h3>{selectedData.role}</h3>
                                     </div>
-                                    <div className={style.team_media_item2}>
-                                        <div className={style.team_media_item2_text}>
-                                            <h1>{selectedData.name.split(" ")[0]}</h1>
-                                            <h1>{selectedData.name.split(" ")[1]}</h1>
-                                        </div>
-                                        <div className={style.team_media_item2_imgs}>
-                                            <img src={avexdesign} alt="" />
-                                            <img src={avextext} alt="" />
-                                        </div>
-
-
-                                    </div>
-                                    <div className={style.team_media_item3}>
-                                        <img src={binary} alt="" />
-                                        <img src={najot_talim_black} className={style.team_right_item2} alt="" />
-                                    </div>
-                                    <div className={style.team_media_item4}>
-                                        <img src={king} alt="" />
-                                    </div>
+                                    <Link to={"#"} className={style.team_media_click}>
+                                        <img src={icon ? finger : fingerclick} alt="" />
+                                        <p>more</p>
+                                    </Link>
                                 </div>
                             ))}
 

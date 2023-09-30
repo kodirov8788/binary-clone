@@ -13,7 +13,7 @@ export const team_data = [
     {
         id: 1,
         name: "Mukhammadali Kodirov ",
-        role: "Senior Fronted-developer",
+        role: "Senior Web developer",
         exprience: 4,
         avatar: Muhammadali2,
         image: Muhammadali,
