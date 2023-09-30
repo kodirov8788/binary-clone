@@ -26,7 +26,7 @@ const Header = ({ setOpenCloseSidebar, openCloseSidebar, }) => {
       </button>
       <a href='/' className={styles.logo}>
         <img src={logo} alt="" />
-        <h1>BINARY</h1>
+        <h1>BINARIES</h1>
       </a>
       <ul><div className={styles.header_language}>
         <Language />

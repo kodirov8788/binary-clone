@@ -12,6 +12,11 @@ import avextext from "../../assets/AVEX.svg"
 import najot_talim_black from "../../assets/najottalim_black.svg"
 import { team_data } from './static'
 import { Container, MainLink } from '../../utils/Components'
+import { Link } from 'react-router-dom'
+import email from "./img/main-black.png"
+import phone from "./img/phone-black.png"
+import telegram from "./img/telegram-black.png"
+import linkedinblack from "./img/linkedin-black.png"
 
 function Team() {
     const [selectedData, setSelectedData] = useState(team_data[0])
@@ -85,26 +90,19 @@ function Team() {
                             {selectedData.desc}</p>
 
                         <div className={style.team_left_devs}>
-                            {/* <div className={`${style.team_dev_avatar}`} >
-                                <div className={style.team_dev_tooltip}>
-                                    <div className={style.team_dev_tooltip_text}>
-                                        <h1></h1>
-                                        <p></p>
-                                    </div>
-                                    <img src={artist} alt="" />
-                                </div>
-                                <img src="" alt="" />
-                            </div> */}
+
                             {team_data.map(data => (
-                                <div className={`${style.team_dev_avatar} ${data.id === selectedData.id ? style.devs_selected : ""}`} onClick={() => selectDev(data.id)} key={data.id}>
+                                <div className={`${style.team_dev_avatar} ${data.id === selectedData.id ? style.devs_selected : ""}`}
+
+                                    onClick={() => selectDev(data.id)} key={data.id}>
                                     <div className={style.team_dev_tooltip}>
                                         <div className={style.team_dev_tooltip_text}>
-                                            <h1>{data.name}</h1>
+                                            <h1>{data.name?.split(" ")[0]}</h1>
                                             <p>{data.role}</p>
                                         </div>
                                         <img src={artist} alt="" />
                                     </div>
-                                    <img src={data.avatar} alt="" />
+                                    <img className={style.team_dev_tooltip_avatar} src={data.avatar} alt="" />
                                 </div>
                             ))}
                         </div>
@@ -112,24 +110,34 @@ function Team() {
                     </div>
 
                     <div className={style.team_right}>
-                        <div className={style.team_right_item1}>
-                            <img src={avexdesign} alt="" />
-                            <img src={avextext} alt="" />
-                        </div>
-                        <img src={najottalin} className={style.team_right_item2} alt="" />
-                        <div className={style.team_right_item3} >
-                            <img src={binary} alt="" />
 
+                        <img className={style.team_right_img} src={selectedData.image} alt="" />
+                        <h1 className={style.team_right_text} >Contact me</h1>
+
+                        <div className={style.team_right_contact}>
+                            <li>
+                                <Link to={"#"}>
+                                    <img src={linkedinblack} alt="" />
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to={"#"}>
+                                    <img src={email} alt="" />
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to={"#"}>
+                                    <img src={phone} alt="" />
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to={"#"}>
+                                    <img src={telegram} alt="" />
+                                </Link>
+                            </li>
                         </div>
-                        <div className={style.team_right_item4}>
-                            <img src={selectedData.image} alt="" />
-                        </div>
-                        <div className={style.team_right_item5}>
-                            <h1>{selectedData.name}</h1>
-                        </div>
-                        <div className={style.team_right_item6}>
-                            <img src={king} alt="" />
-                        </div>
+
+
                     </div>
 
                     <div className={style.team_media_container}>
@@ -183,7 +191,7 @@ function Team() {
                     <div className={style.team_btnWrap}>
                         <MainLink text={"Ваша выгода"} icon={book_icon} link={"#"} />
                     </div>
-                    <p >Наша лучшая сторона – показать реальные результаты.
+                    <p className={style.team_footer_text}>Наша лучшая сторона – показать реальные результаты.
                         Посмотрите ваши выгоды при выборе нас</p>
                 </div>
             </Container>

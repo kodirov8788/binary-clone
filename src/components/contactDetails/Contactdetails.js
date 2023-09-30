@@ -26,11 +26,11 @@ function Contactdetails() {
                             </li>
                             <li>
                                 <h2>{t("number")}:</h2>
-                                <p>+998 99 978-75-25</p>
+                                <a className='phone_number' href="tel:+998939427899">   <p>+998 93 942 78 99</p></a>
                             </li>
                             <li>
                                 <h2>{t("address")}:</h2>
-                                <p>binary@bin.uz</p>
+                                <a className='phone_number' href="mailto:binaries@bin.uz">  <p>binaries@bin.uz</p></a>
                             </li>
                         </ul>
 

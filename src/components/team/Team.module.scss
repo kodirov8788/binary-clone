@@ -31,6 +31,8 @@
                     width: 92px;
                     height: 92px;
                     margin-right: 30px;
+                    border-radius: 50%;
+                    object-fit: cover;
                 }
 
                 .team_dev_name {
@@ -77,14 +79,25 @@
                 display: flex;
                 justify-content: space-between;
 
+
                 .team_dev_avatar {
                     border: 2px solid transparent;
                     cursor: pointer;
                     position: relative;
-                    width: 55px;
-                    height: 55px;
                     border-radius: 50% 0 50% 50%;
+                    // border: 2px solid black;
+
                     transition: .3s;
+
+                    .team_dev_tooltip_avatar {
+                        width: 55px;
+                        height: 55px;
+                        object-fit: cover;
+                        // border-radius: 50%;
+                        // border: 2px solid black;
+                        border-radius: 50%;
+
+                    }
 
                     .team_dev_tooltip {
                         transform: scale(0);
@@ -98,14 +111,17 @@
                         align-items: center;
 
 
+
                         img {
                             position: absolute;
                             right: 40px;
-                            transform: skew(21deg)
+                            transform: skew(21deg);
+
+
                         }
 
                         h1 {
-                            right: 110px;
+                            left: 30px;
                             position: absolute;
                             top: 10px;
                             font-size: 18px;
@@ -117,7 +133,7 @@
                             position: absolute;
                             font-size: 11px;
                             bottom: 10px;
-                            right: 110px;
+                            left: 40px;
                             opacity: .6;
                             transform: skew(21deg);
                             font-family: $font-sfpro-light;
@@ -126,12 +142,12 @@
 
                     &:hover {
                         background-color: $main-theme-gray;
-                        transform: translateY(-10px);
+                        // transform: translateY(-10px);
 
                         .team_dev_tooltip {
                             position: absolute;
                             min-width: 250px;
-                            padding-left: 30px;
+                            padding-left: 20px;
                             height: 50px;
                             background-color: $main-theme-dark;
                             opacity: 1;
@@ -147,6 +163,7 @@
                     border: 2px solid $main-theme-gray;
                     border-radius: 50%;
                     background-color: $main-theme-gray;
+                    transform: translateY(-5px);
 
                     &:hover {
                         border-radius: 50% 0 50% 50%;
@@ -157,88 +174,52 @@
         }
 
         .team_right {
-            width: 357px;
+            width: 300px;
             height: 350px;
-            display: grid;
-            grid-template-areas:
-                'header header header header header header'
-                'menu right right right right right'
-                'main right right right right right'
-                'footer footer footer blog blog blog';
-            grid-template-rows: 107px 80px 136px 100;
+            // margin-top: 50px;
+            // border: 2px solid black;
 
-            .team_right_item1 {
-                grid-area: header;
-                position: relative;
-                display: flex;
-                align-items: center;
-
-                img {
-                    &:last-child {
-                        position: absolute;
-                        right: 50px;
-                    }
-                }
-            }
-
-            .team_right_item2 {
-                grid-area: menu;
-            }
-
-            .team_right_item3 {
-                grid-area: main;
-                // border: 2px solid red;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-color: $main-theme-dark;
-                height: 136px;
-                width: 154px;
-            }
-
-            .team_right_item4 {
-                grid-area: right;
+            .team_right_img {
                 width: 100%;
-                height: 241px;
+                height: 80%;
+                object-fit: cover;
+                object-position: top;
+                border-radius: 4px;
+            }
+
+            .team_right_text {
+                text-align: center;
+                font-family: $font-sfpro-bold;
+                margin-top: 30px;
+                font-size: 20px;
+
+            }
+
+            .team_right_contact {
+                // border: 2px solid black;
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+                margin-top: 30px;
+
+
 
                 img {
-                    width: 100%;
+                    width: 50px;
+                    // border: 2px solid black;
                     height: 100%;
                     object-fit: cover;
-                    margin-right: 5px;
+                    transition: 0.3s;
 
+                    &:hover {
+                        transform: scale(1.02);
+                    }
                 }
+
+
+
             }
 
-            .team_right_item5 {
-                grid-area: footer;
-                // border: 2px solid red;
-                font-family: $font-sfpro-bold;
-                font-style: normal;
-                font-weight: 650;
-                font-size: 32px;
-                line-height: 38px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 107px;
-                text-align: center;
-                color: $main-theme-dark;
-                border-width: 0px 1px 1px 1px;
-                border-style: solid;
-                border-color: $main-theme-dark;
-                ;
-            }
-
-            .team_right_item6 {
-                grid-area: blog;
-                // border: 2px solid red;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-color: $main-theme-dark;
-                ;
-            }
 
         }
 
@@ -246,6 +227,7 @@
 
     .team_media_container {
         display: none;
+
     }
 
     .team_footer {
@@ -263,7 +245,14 @@
             font-weight: 400;
             font-size: 18px;
             line-height: 22px;
-            width: 60%;
+            width: 40%;
+
+        }
+
+        .team_footer_text {
+            // border: 2px solid black;
+            transform: translateX(-150px);
+            text-align: center;
         }
 
     }
